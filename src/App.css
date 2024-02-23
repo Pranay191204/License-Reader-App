@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+/* Global styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Application container styles, adjusting for a more centered and modern look */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Creates consistent space between children */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+/* Header styles, ensuring they are responsive and well-padded */
+.app-header {
   background-color: #282c34;
-  min-height: 100vh;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+}
+
+/* Adjustments to the capture area for consistency and responsiveness */
+.capture-area {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px; /* Ensures space between video and button */
 }
 
-.App-link {
-  color: #61dafb;
+/* Styles for the video and canvas elements, making sure they are responsive */
+video, canvas {
+  max-width: 100%;
+  border-radius: 8px; /* Adds rounded corners for a modern look */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* User details form styling for a cleaner, more aligned appearance */
+.user-details-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px; /* Limits form width for larger screens */
+  gap: 15px; /* Ensures consistent spacing between form fields */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds depth with a subtle shadow */
+  border-radius: 8px; /* Rounds the corners for a softer look */
+  background: #fff; /* Ensures background is consistently white */
+}
+
+/* Label and input enhancements for better readability and alignment */
+.form-group label {
+  display: block; /* Ensures the label is on its own line */
+  margin-bottom: 5px; /* Creates space between the label and input */
+}
+
+.form-group input {
+  width: 100%; /* Ensures inputs take up available space */
+  padding: 10px; /* Increases padding for better touch target size */
+  border: 1px solid #ccc; /* Subtle border for definition */
+  border-radius: 4px; /* Softens edges with rounded corners */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+  .user-details-form, .capture-area {
+    width: 90%; /* Allows for more breathing room on smaller screens */
   }
 }

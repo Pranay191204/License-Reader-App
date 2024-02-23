@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Project Overview
+
+## Architecture
+
+This project utilizes a React-based frontend to capture images through the user's webcam and process them using Tesseract.js for OCR functionality...
+
+## Technologies Used
+
+- React for the frontend UI.
+- Tesseract.js for OCR processing.
+- Netlify for deployment.
+
+## Challenges and Assumptions
+
+One of the primary challenges was enhancing OCR accuracy... We assumed standard lighting conditions and a modern web camera for capturing images. The license format assumed is based on common layouts observed in U.S. driver's licenses...
